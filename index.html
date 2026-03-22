@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صفحتي</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: white;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(#38bdf8 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveBg 20s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes moveBg {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(-200px,-200px); }
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #38bdf8;
+    text-shadow: 0 0 10px #38bdf8, 0 0 30px #38bdf8;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px #38bdf8;
+}
+
+h2 {
+    color: #22c55e;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #cbd5f5;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 8px;
+    margin: 5px 0;
+    background: rgba(56,189,248,0.1);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    background: rgba(56,189,248,0.3);
+    transform: translateX(5px);
+}
+
+.timeline {
+    border-left: 2px solid #38bdf8;
+    padding-left: 15px;
+}
+
+.timeline p {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.timeline p::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    background: #38bdf8;
+    border-radius: 50%;
+}
+
+/* أزرار التواصل */
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: rgba(56,189,248,0.1);
+    color: white;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background: #38bdf8;
+    color: black;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>👨‍💻 رحلتي في البرمجة</h1>
+
+<div class="card">
+<h2>👤 معلوماتي</h2>
+<p>
+الاسم: محمد <br>
+العمر: 18 سنة <br>
+البلد: المغرب 🇲🇦
+</p>
+</div>
+
+<div class="card">
+<h2>📍 مسيرتي</h2>
+<div class="timeline">
+<p>البداية: تعلم HTML و CSS</p>
+<p>التطور: تعلم JavaScript</p>
+<p>الحاضر: العمل على Linux و VS Code</p>
+</div>
+</div>
+
+<div class="card">
+<h2>💡 مهاراتي</h2>
+<ul>
+<li>HTML - بناء الصفحات</li>
+<li>CSS - تصميم الواجهات</li>
+<li>JavaScript - التفاعل</li>
+<li>Python - البرمجة ومعالجة البيانات</li>
+<li>Linux - بيئة العمل</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🎯 هدفي</h2>
+<p>
+أن أصبح مطورًا محترفًا وأبني مشاريع قوية ومفيدة.
+</p>
+</div>
+
+<div class="card">
+<h2>📞 تواصل معي</h2>
+<div class="socials">
+<a href="https://t.me/XOXSGF" target="_blank">Telegram</a>
+<a href="https://wa.me/qr/NT6KYHJBQTSKI1" target="_blank">WhatsApp</a>
+</div>
+</div>
+
+<footer>
+Made with SIMO 💻 | Mohamed
+</footer>
+
+</div>
+
+</body>
+</html>
